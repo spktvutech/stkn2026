@@ -1,0 +1,37 @@
+/* design-tokens · Phương án B "Lớp học xanh" · v1 · 02/10/2026
+   Dùng chung cho: landing, bài học HTML, slide (PHA 8), storyboard.
+   DOCX bộ tài liệu: dùng định dạng của skill khanh-viet-giao-trinh, chỉ lấy --teal/--coral và tên Studio. */
+:root{
+  /* Màu */
+  --bg:#FFFBF4;      /* nền kem */
+  --card:#FFFFFF;    /* thẻ */
+  --line:#EADFCB;    /* viền */
+  --ink:#14302D;     /* chữ chính (tương phản trên --bg ≈ 14:1) */
+  --muted:#4C6360;   /* chữ phụ (≥ 5.7:1 trên --bg) */
+  --teal:#0B6B63;    /* màu thương hiệu, nút chính, tiêu đề (trắng trên teal ≥ 6:1) */
+  --teal-d:#084F49;  /* hover */
+  --mint:#D5F0EA;    /* nền nhấn nhẹ, khung mục tiêu */
+  --coral:#C2412B;   /* nút phụ, dòng điện, cảnh báo (trắng trên coral ≥ 5:1) */
+  --sun:#FFC93C;     /* nhãn, tab đang chọn, bóng đèn sáng (chữ trên nền sun dùng --ink) */
+  --ok:#1F7A3A;  --ok-l:#DDF3E2;
+  --warn:#8A5300; --warn-l:#FFF4DC;
+  --bad:#B3261E;  --bad-l:#FCE4E0;
+  /* Hình khối */
+  --r:20px;                         /* bo góc thẻ */
+  --r-pill:999px;                   /* nút, chip */
+  --sh:0 6px 0 rgba(11,107,99,.12); /* bóng "gạch" mềm */
+  --bd:2px;                         /* độ dày viền */
+  /* Chữ */
+  --font:'Nunito','Segoe UI',Roboto,Arial,sans-serif; /* Nunito 400/800 nhúng base64 (latin + vietnamese) */
+  --fs-body:17px; --fs-body-demo:21px; --fs-h1:clamp(30px,5vw,50px); --fs-h2:30px; --fs-h3:19px;
+  --fw-body:400; --fw-head:800;
+  /* Mạch điện */
+  --wire:#4C6360; --wire-w:6px; --flow:#C2412B; --flow-w:5px; --lamp-on:#FFD84D;
+}
+/* Quy tắc dùng
+   - Nút chính: nền teal, chữ trắng, pill. Nút phụ: viền coral, nền trắng.
+   - Nhãn: nền sun, chữ ink, xoay -1.5°, bo 8px (chỉ 1 nhãn mỗi màn hình).
+   - Trạng thái: không dùng màu một mình; luôn kèm chữ hoặc dấu ✓ / !.
+   - Dòng điện: luôn coral, nét đứt chạy từ cực dương → công tắc → bóng đèn → cực âm.
+   - prefers-reduced-motion: tắt animation dòng điện, rung, nhấp nháy.
+   - Không dùng chế độ tối (ưu tiên máy chiếu, tương phản cao). */
